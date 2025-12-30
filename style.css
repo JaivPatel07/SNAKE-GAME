@@ -1,26 +1,136 @@
-body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-family: Arial;
-  background: #111;
-  color: white;
+body{
+  background-color: rgb(11, 8, 22);
+  text-align: center;
+}
+#box{
+  background-color: #212121;
+  margin: auto;
+  margin-top: 50px;
+  position: relative;
+  border: 5px solid #ffffff;
+}
+.score{
+  color: #ffffff;
+  font-size: 100px;
 }
 
-#game-board {
-  width: 400px;
-  height: 400px;
-  background: #222;
-  display: grid;
-  grid-template-columns: repeat(20, 1fr);
-  grid-template-rows: repeat(20, 1fr);
-  border: 2px solid white;
+#resetBtn {
+  margin-top: 10px;
+  padding: 8px 16px;
+  font-size: 16px;
+  cursor: pointer;
+}
+/* .border{
+    width: 418px;
+    height: 419px;
+    background-image: conic-gradient( #ff0000, #ffff00, #00ff00, #00ffff, #0000ff, #ff00ff, #ff0000);
+    filter: blur(1.5rem);
+    position: absolute;
+    top: 54px;
+    left: 559px;
+    z-index: -1;
+    align-items: center;
+} */
+.border {
+    width: 418px;
+    height: 419px;
+    position: absolute;
+    top: 54px;
+    left: 559px;
+    z-index: -1;
+    filter: blur(1.5rem);
+
+    background-image: conic-gradient(
+        from 0deg,
+        #ff0000,
+        #ffff00,
+        #00ff00,
+        #00ffff,
+        #0000ff,
+        #ff00ff,
+        #ff0000
+    );
+
+    animation: spinColor 1s linear infinite;
 }
 
-.snake {
-  background: limegreen;
+@keyframes spinColor {
+    0%{
+      background-image: conic-gradient(
+        from 0deg,
+        #ff0000,
+        #ffff00,
+        #00ff00,
+        #00ffff,
+        #0000ff,
+        #ff00ff,
+    );
+    }
+    16%{
+      background-image: conic-gradient(
+        from 0deg,
+        #ffff00,
+        #00ff00,
+        #00ffff,
+        #0000ff,
+        #ff00ff,
+        #ff0000
+    );
+    }
+    32%{
+      background-image: conic-gradient(
+        from 0deg,
+        #00ff00,
+        #00ffff,
+        #0000ff,
+        #ff00ff,
+        #ff0000,
+        #ffff00
+    );
+    }
+    48%{
+      background-image: conic-gradient(
+        from 0deg,
+        #00ffff,
+        #0000ff,
+        #ff00ff,
+        #ff0000,
+        #ffff00,
+        #00ff00
+    );
+    } 
+    64%{
+      background-image: conic-gradient(
+        from 0deg,
+        #0000ff,
+        #ff00ff,
+        #ff0000,
+        #ffff00,
+        #00ff00,
+        #00ffff
+    );
+    }
+    80%{
+      background-image: conic-gradient(
+        from 0deg,
+        #ff00ff,
+        #ff0000,
+        #ffff00,
+        #00ff00,
+        #00ffff,
+        #0000ff
+    );
+    }
+    100%{
+      background-image: conic-gradient(
+        from 0deg,
+        #ff0000,
+        #ffff00,
+        #00ff00,
+        #00ffff,
+        #0000ff,
+        #ff00ff,
+    );
+    }
 }
 
-.food {
-  background: red;
-}
