@@ -32,105 +32,40 @@ body{
     align-items: center;
 } */
 .border {
-    width: 418px;
-    height: 419px;
-    position: absolute;
-    top: 54px;
-    left: 559px;
-    z-index: -1;
-    filter: blur(1.5rem);
+  width: 418px;
+  height: 419px;
+  position: absolute;
+  top: 54px;
+  left: 559px;
+  z-index: -1;
+  filter: blur(1.5rem);
 
-    background-image: conic-gradient(
-        from 0deg,
-        #ff0000,
-        #ffff00,
-        #00ff00,
-        #00ffff,
-        #0000ff,
-        #ff00ff,
-        #ff0000
-    );
+  background: conic-gradient(
+    from var(--angle),
+    #ff0000,
+    #ffff00,
+    #00ff00,
+    #00ffff,
+    #0000ff,
+    #ff00ff,
+    #ff0000
+  );
 
-    animation: spinColor 1s linear infinite;
+  animation: colorMove 7s linear infinite;
 }
 
-@keyframes spinColor {
-    0%{
-      background-image: conic-gradient(
-        from 0deg,
-        #ff0000,
-        #ffff00,
-        #00ff00,
-        #00ffff,
-        #0000ff,
-        #ff00ff,
-    );
-    }
-    16%{
-      background-image: conic-gradient(
-        from 0deg,
-        #ffff00,
-        #00ff00,
-        #00ffff,
-        #0000ff,
-        #ff00ff,
-        #ff0000
-    );
-    }
-    32%{
-      background-image: conic-gradient(
-        from 0deg,
-        #00ff00,
-        #00ffff,
-        #0000ff,
-        #ff00ff,
-        #ff0000,
-        #ffff00
-    );
-    }
-    48%{
-      background-image: conic-gradient(
-        from 0deg,
-        #00ffff,
-        #0000ff,
-        #ff00ff,
-        #ff0000,
-        #ffff00,
-        #00ff00
-    );
-    } 
-    64%{
-      background-image: conic-gradient(
-        from 0deg,
-        #0000ff,
-        #ff00ff,
-        #ff0000,
-        #ffff00,
-        #00ff00,
-        #00ffff
-    );
-    }
-    80%{
-      background-image: conic-gradient(
-        from 0deg,
-        #ff00ff,
-        #ff0000,
-        #ffff00,
-        #00ff00,
-        #00ffff,
-        #0000ff
-    );
-    }
-    100%{
-      background-image: conic-gradient(
-        from 0deg,
-        #ff0000,
-        #ffff00,
-        #00ff00,
-        #00ffff,
-        #0000ff,
-        #ff00ff,
-    );
-    }
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@keyframes colorMove {
+  from {
+    --angle: 0deg;
+  }
+  to {
+    --angle: 360deg;
+  }
 }
 
