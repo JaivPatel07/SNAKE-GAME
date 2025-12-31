@@ -146,24 +146,24 @@ document.addEventListener("DOMContentLoaded", () => {
   const resetBtn = document.getElementById("resetBtn");
   resetBtn.addEventListener("click", resetGame);
   function resetGame() {
-  running = false;
+    running = false;
 
-  snake = [
-    { x: unitSize * 4, y: 0 },
-    { x: unitSize * 3, y: 0 },
-    { x: unitSize * 2, y: 0 },
-    { x: unitSize, y: 0 },
-    { x: 0, y: 0 }
-  ];
+    snake = [
+      { x: unitSize * 4, y: 0 },
+      { x: unitSize * 3, y: 0 },
+      { x: unitSize * 2, y: 0 },
+      { x: unitSize, y: 0 },
+      { x: 0, y: 0 }
+    ];
 
-  xVelocity = unitSize;
-  yVelocity = 0;
-  score = 0;
-  scoreElement.textContent = score;
+    xVelocity = unitSize;
+    yVelocity = 0;
+    score = 0;
+    scoreElement.textContent = score;
 
-  clearBoard();
-  createFood();
-  running = true;
-  nextTick();
-}
+    clearBoard();
+    createFood();
+    running = true;
+    nextTick();
+  }
 });
