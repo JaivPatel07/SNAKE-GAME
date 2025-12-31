@@ -4,7 +4,7 @@ A classic Snake game implementation using vanilla JavaScript and HTML5 Canvas.
 
 ## Screenshot
 
-(.![alt text](image.png))
+![alt text](image.png)
 
 ## Description
 
