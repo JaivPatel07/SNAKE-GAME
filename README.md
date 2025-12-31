@@ -4,8 +4,7 @@ A classic Snake game implementation using vanilla JavaScript and HTML5 Canvas.
 
 ## Screenshot
 
-![Game Screenshot](.![alt text](image.png))
-<!-- Replace './screenshot.png' with the actual path to your image file. You can upload an image to the repo and link it here. -->
+(.![alt text](image.png))
 
 ## Description
 
