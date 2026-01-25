@@ -2,6 +2,8 @@
 
 A classic Snake game implementation using vanilla JavaScript and HTML5 Canvas.
 
+live demo https://jaivpatel07.github.io/SNAKE-GAME/
+
 ## Screenshot
 
 ![alt text](image.png)
